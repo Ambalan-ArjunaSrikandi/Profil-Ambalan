@@ -106,21 +106,22 @@ nav ul li {
 }
 
 .tab {
-  flex: 1; /* supaya sama besar & penuh */
+  flex: 1;
   text-align: center;
   padding: 10px 0;
   background: #000;
-  cursor: pointer;
-  font-weight: bold;
   color: white;
+  font-weight: bold;
+  cursor: pointer;
   transition: background 0.3s;
-  border-radius: 5px;
+  border-radius: 4px;
 }
 
-.tab:hover {
-  background: #444;
+/* tab aktif */
+.tab.active {
+  background: orange;
+  color: black;
 }
-  
       
       .tab-content {
         display: none;
