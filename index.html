@@ -32,32 +32,38 @@
         margin: 5px 0;
         letter-spacing: 1px;
       }
-      nav {
-        text-align: center;
-        background: rgba(0, 0, 0, 0.9);
-        padding: 10px 0;
-      }
       nav ul {
-        list-style: none;
-      }
-      nav ul li {
-        display: inline-block;
-        margin: 0 15px;
-      }
-      nav ul li a {
-        color: white;
-        text-decoration: none;
-        font-size: 1.2rem;
-        font-weight: bold;
-        padding: 8px 15px;
-        transition: background 0.3s, border-bottom 0.3s;
-        border-bottom: 3px solid transparent;
-      }
-      nav ul li a:hover,
-      nav ul li a.active {
-        border-bottom: 3px solid #ffd700;
-        background: rgba(255, 215, 0, 0.2);
-      }
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 5px;
+}
+
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    width: 100%;
+    text-align: center;
+    margin: 2px 0;
+  }
+
+  nav ul li a {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    font-size: 1rem;
+  }
+}
       section {
         padding: 30px;
         background: rgba(255, 255, 255, 0.9);
