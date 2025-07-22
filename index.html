@@ -106,7 +106,7 @@ nav ul li {
 }
 
 .tab {
-  flex: 1;               /* sama besar, bagi rata */
+  flex: 1;
   text-align: center;
   padding: 10px 0;
   background: #000;
@@ -114,11 +114,13 @@ nav ul li {
   font-weight: bold;
   cursor: pointer;
   transition: background 0.3s;
-  border-radius: 4px;    /* biar agak lembut */
+  border-radius: 4px;
 }
 
-.tab:hover {
-  background: #444;
+/* tab aktif */
+.tab.active {
+  background: orange;
+  color: black;
 }
   
       
