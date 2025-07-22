@@ -1,101 +1,121 @@
 <!DOCTYPE html>
 <html lang="id">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Ambalan Arjuna Srikandi</title>
-<meta name="description" content="Website resmi Ambalan Arjuna Srikandi Gugus Depan 01.241-01.242 MA Taqwiyatul Wathon Sumberejo Mranggen Demak. Informasi kegiatan, galeri, dan struktur Dewan Ambalan.">
-<meta name="keywords" content="Ambalan Arjuna Srikandi, MA Taqwiyatul Wathon, Pramuka Penegak, Pramuka Demak, Arjuna, Srikandi, Pramuka Mranggen">
-<link rel="icon" type="image/png" href="img/Logo ambalan.jpg" />
-<style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-body {
-  font-family: Arial, sans-serif;
-  background: url("img/latihan.jpg") no-repeat center center;
-  background-size: cover;
-  background-attachment: scroll;
-  color: #333;
-}
-header {
-  text-align: center;
-  padding: 20px;
-  background: rgba(0, 0, 0, 0.8);
-  color: white;
-}
-header p {
-  font-size: 1rem;
-  margin: 5px 0;
-  letter-spacing: 1px;
-}
-nav {
-  text-align: center;
-  background: rgba(0, 0, 0, 0.9);
-  padding: 10px 0;
-}
-nav ul {
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ambalan Arjuna Srikandi</title>
+    <meta name="description" content="Website resmi Ambalan Arjuna Srikandi Gugus Depan 01.241-01.242 MA Taqwiyatul Wathon Sumberejo Mranggen Demak. Informasi kegiatan, galeri, dan struktur Dewan Ambalan.">
+    <meta name="keywords" content="Ambalan Arjuna Srikandi, MA Taqwiyatul Wathon, Pramuka Penegak, Pramuka Demak, Arjuna, Srikandi, Pramuka Mranggen">
+  <!-- Ini favicon-nya -->
+  <link rel="icon" type="image/png" href="img/Logo ambalan.jpg" />
+</head>
+    <style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: "Arial", sans-serif;
+    background: url("img/latihan.jpg") no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+  }
+
+  header {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+  }
+
+  header p {
+    font-size: 1rem;
+    margin: 5px 0;
+    letter-spacing: 1px;
+  }
+
+  nav {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 10px 0;
+  }
+
+ nav ul {
   list-style: none;
+  padding: 0;
+  margin: 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 10px;
 }
-nav ul li a {
-  color: white;
-  text-decoration: none;
-  font-size: 1rem;
-  font-weight: bold;
-  padding: 6px 12px;
-  transition: background 0.3s, border-bottom 0.3s;
-  border-bottom: 3px solid transparent;
+
+nav ul li {
+  margin: 5px;
 }
-nav ul li a:hover,
-nav ul li a.active {
-  border-bottom: 3px solid #ffd700;
-  background: rgba(255, 215, 0, 0.2);
+
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    width: 100%;
+    text-align: center;
+    margin: 2px 0;
+  }
+
+  nav ul li a {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    font-size: 1rem;
+  }
 }
-section {
-  padding: 20px;
-  background: rgba(255, 255, 255, 0.9);
-  margin: 15px auto;
-  border-radius: 10px;
-  max-width: 800px;
-  text-align: center;
+  section {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    margin: 15px auto;
+    border-radius: 10px;
+    max-width: 800px;
+    text-align: center;
+  }
+
+  .tabs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+  }
+
+  .tab {
+    padding: 8px 15px;
+    background: #000;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    color: white;
+    transition: background 0.3s;
+  }
+
+  .tab:hover,
+  .tab.active {
+    background: #ffd700;
+    color: black;
+  }
+
+  .tab-content {
+    display: none;
+  }
+ .gallery img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
 }
-.tabs {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
-  margin: 20px 0;
-}
-.tab {
-  padding: 8px 15px;
-  background: #000;
-  border-radius: 5px;
-  cursor: pointer;
-  font-weight: bold;
-  color: white;
-  transition: background 0.3s;
-}
-.tab:hover,
-.tab.active {
-  background: #ffd700;
-  color: black;
-}
-.tab-content {
-  display: none;
-}
-.gallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
-}
-.gallery img {
+  .gallery img {
   width: 250px;
   height: 180px;
   object-fit: cover;
@@ -103,180 +123,212 @@ section {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s;
 }
-.gallery img:hover {
-  transform: scale(1.05);
+.gallery img {
+  width: 100%;
+  max-width: 250px;
+  height: 180px;
+  object-fit: cover;
 }
-footer {
-  text-align: center;
-  padding: 20px;
-  background: #222;
-  color: white;
-  margin-top: 20px;
-  border-top: 5px solid #ffd700;
-  font-size: 0.9rem;
-}
-
-/* Responsive */
-@media (max-width: 600px) {
-  nav ul {
-    flex-direction: column;
-  }
-  nav ul li {
-    width: 100%;
+  footer {
     text-align: center;
+    padding: 20px;
+    background: #222;
+    color: white;
+    margin-top: 20px;
+    border-top: 5px solid #ffd700;
+    font-size: 0.9rem;
   }
-  nav ul li a {
-    display: block;
-    width: 100%;
-    padding: 10px 0;
+
+  /* RESPONSIVE */
+  @media (max-width: 600px) {
+    nav ul li {
+      display: block;
+      margin: 5px 0;
+    }
+
+    nav ul li a {
+      display: inline-block;
+      width: 90%;
+      font-size: 1rem;
+    }
+
+    section {
+      margin: 10px;
+      padding: 15px;
+    }
+
+    .tabs {
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .tab {
+      width: 100%;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 1.4rem;
+    }
+
+    header p {
+      font-size: 0.9rem;
+    }
+
+    .gallery img {
+      max-width: 90%;
+    }
   }
-  section {
-    margin: 10px;
-    padding: 15px;
-  }
-  .tabs {
-    flex-direction: column;
-  }
-  .gallery img {
-    max-width: 90%;
-  }
-}
 </style>
-</head>
+  </head>
+  <body>
+    <header>
+      <h1>Ambalan Arjuna Srikandi</h1>
+      <p>Pangkalan MA Taqwiyatul Wathon</p>
+      <p>Gugus Depan 01.241-01.242</p>
+    </header>
 
-<body>
-<header>
-<h1>Ambalan Arjuna Srikandi</h1>
-<p>Pangkalan MA Taqwiyatul Wathon</p>
-<p>Gugus Depan 01.241-01.242</p>
-</header>
+    <nav>
+      <ul>
+        <li><a href="#tentang" class="active">Tentang</a></li>
+        <li><a href="#visi-misi">Visi & Misi</a></li>
+        <li><a href="#kegiatan">Kegiatan</a></li>
+        <li><a href="#galeri">Galeri</a></li>
+        <li><a href="#dewan">Dewan Ambalan</a></li>
+      </ul>
+    </nav>
 
-<nav>
-<ul>
-<li><a href="#tentang" class="active">Tentang</a></li>
-<li><a href="#visi-misi">Visi & Misi</a></li>
-<li><a href="#kegiatan">Kegiatan</a></li>
-<li><a href="#galeri">Galeri</a></li>
-<li><a href="#dewan">Dewan Ambalan</a></li>
-</ul>
-</nav>
+    <section id="tentang">
+      <h2>Tentang Ambalan</h2>
+      <p style="margin-top: 20px; text-align: justify; line-height: 1.8">
+        Ambalan Arjuna Srikandi merupakan wadah pembinaan bagi Pramuka Penegak di Pangkalan MA Taqwiyatul Wathon Sumberejo Mranggen Demak. Ambalan ini bertujuan membentuk generasi muda yang tangguh, berkarakter, dan memiliki wawasan luas.
+        Kegiatan di Ambalan Arjuna Srikandi meliputi latihan rutin, pelatihan kepemimpinan, dan perkemahan. Setiap kegiatan bertujuan untuk mengembangkan keterampilan, kemandirian, serta menanamkan nilai-nilai kepemimpinan dan kerja sama.
+        Nama "Arjuna" dan "Srikandi" diambil dari tokoh pewayangan yang melambangkan ketangguhan, keberanian, serta semangat juang yang tinggi. Filosofi ini menjadi dasar bagi setiap anggota Ambalan dalam mengembangkan diri dan
+        berkontribusi bagi masyarakat.
+      </p>
+    </section>
 
-<section id="tentang">
-<h2>Tentang Ambalan</h2>
-<p style="margin-top:20px; text-align:justify; line-height:1.8">
-Ambalan Arjuna Srikandi merupakan wadah pembinaan bagi Pramuka Penegak di Pangkalan MA Taqwiyatul Wathon Sumberejo Mranggen Demak. Ambalan ini bertujuan membentuk generasi muda yang tangguh, berkarakter, dan memiliki wawasan luas.
-Kegiatan di Ambalan Arjuna Srikandi meliputi latihan rutin, pelatihan kepemimpinan, dan perkemahan. Setiap kegiatan bertujuan untuk mengembangkan keterampilan, kemandirian, serta menanamkan nilai-nilai kepemimpinan dan kerja sama.
-</p>
-</section>
+    <section id="visi-misi">
+      <h2>Visi & Misi</h2>
+      <div class="tabs">
+        <div class="tab" onclick="toggleTab(this, 'visi')">Visi</div>
+        <div class="tab" onclick="toggleTab(this, 'misi')">Misi</div>
+      </div>
+      <div id="visi" class="tab-content">
+        <p style="text-align: center; line-height: 1.8">Membentuk generasi muda yang tangguh, berkarakter, berwawasan luas, serta memiliki jiwa kepemimpinan dan tanggung jawab sosial yang tinggi.</p>
+      </div>
+      <div id="misi" class="tab-content">
+        <ol style="padding-left: 20px; line-height: 1.8">
+          <li style="text-align: justify">Menanamkan nilai-nilai kepramukaan yang meliputi kedisiplinan, keberanian, dan kerja sama tim.</li>
+          <li style="text-align: justify">Mengembangkan keterampilan anggota melalui kegiatan latihan rutin, pelatihan kepemimpinan, dan perkemahan.</li>
+          <li style="text-align: justify">Mendorong anggota untuk aktif berkontribusi dalam kegiatan sosial dan lingkungan.</li>
+          <li style="text-align: justify">Membentuk pribadi yang mandiri, bertanggung jawab, dan berintegritas tinggi.</li>
+          <li style="text-align: justify">Menumbuhkan semangat belajar dan pengembangan diri secara berkelanjutan demi masa depan yang lebih baik.</li>
+        </ol>
+      </div>
+    </section>
 
-<section id="visi-misi">
-<h2>Visi & Misi</h2>
-<div class="tabs">
-<div class="tab" onclick="toggleTab(this, 'visi')">Visi</div>
-<div class="tab" onclick="toggleTab(this, 'misi')">Misi</div>
-</div>
-<div id="visi" class="tab-content">
-<p style="text-align:center; line-height:1.8">
-Membentuk generasi muda yang tangguh, berkarakter, berwawasan luas, serta memiliki jiwa kepemimpinan dan tanggung jawab sosial yang tinggi.
-</p>
-</div>
-<div id="misi" class="tab-content">
-<ol style="padding-left:20px; line-height:1.8; text-align:justify">
-<li>Menanamkan nilai-nilai kepramukaan yang meliputi kedisiplinan, keberanian, dan kerja sama tim.</li>
-<li>Mengembangkan keterampilan anggota melalui kegiatan latihan rutin, pelatihan kepemimpinan, dan perkemahan.</li>
-<li>Mendorong anggota untuk aktif berkontribusi dalam kegiatan sosial dan lingkungan.</li>
-<li>Membentuk pribadi yang mandiri, bertanggung jawab, dan berintegritas tinggi.</li>
-<li>Menumbuhkan semangat belajar dan pengembangan diri secara berkelanjutan demi masa depan yang lebih baik.</li>
-</ol>
-</div>
-</section>
+    <section id="kegiatan">
+      <h2>Kegiatan Ambalan</h2>
+      <div class="tabs">
+        <div class="tab" onclick="toggleTab(this, 'latihan')">Latihan</div>
+        <div class="tab" onclick="toggleTab(this, 'perkemahan')">Perkemahan</div>
+        <div class="tab" onclick="toggleTab(this, 'kepemimpinan')">Kepemimpinan</div>
+      </div>
+      <div id="latihan" class="tab-content">
+        <p>
+          Latihan rutin dilaksanakan setiap <strong>Sabtu pukul 07.00 – 08.30 WIB</strong>. Kegiatan ini bertujuan untuk meningkatkan keterampilan dasar Pramuka, seperti baris-berbaris, tali-temali, semaphore, serta pengembangan fisik dan
+          mental.
+        </p>
+      </div>
+      <div id="perkemahan" class="tab-content">
+        <p>
+          Perkemahan bertujuan melatih kemandirian, keberanian, dan kerja sama di alam terbuka. Terdiri dari berbagai jenis kegiatan seperti <strong>KPTA (Kemah Penerimaan Tamu Ambalan)</strong>,
+          <strong>KOPABA (Kemah Orientasi dan Pelatikan Anggota Baru)</strong>, <strong>KKT (Kemah Kenaikan Tingkat)</strong>, serta <strong>Purna Bakti</strong>.
+        </p>
+      </div>
+      <div id="kepemimpinan" class="tab-content">
+        <p>Kegiatan kepemimpinan bertujuan untuk menumbuhkan jiwa pemimpin, meningkatkan rasa tanggung jawab, serta melatih keterampilan mengorganisasi dan bekerja dalam tim.</p>
+      </div>
+    </section>
 
-<section id="kegiatan">
-<h2>Kegiatan Ambalan</h2>
-<div class="tabs">
-<div class="tab" onclick="toggleTab(this, 'latihan')">Latihan</div>
-<div class="tab" onclick="toggleTab(this, 'perkemahan')">Perkemahan</div>
-<div class="tab" onclick="toggleTab(this, 'kepemimpinan')">Kepemimpinan</div>
-</div>
-<div id="latihan" class="tab-content">
-<p>Latihan rutin dilaksanakan setiap <strong>Sabtu pukul 07.00 – 08.30 WIB</strong>. Kegiatan ini bertujuan untuk meningkatkan keterampilan dasar Pramuka, seperti baris-berbaris, tali-temali, semaphore, serta pengembangan fisik dan mental.</p>
-</div>
-<div id="perkemahan" class="tab-content">
-<p>Perkemahan bertujuan melatih kemandirian, keberanian, dan kerja sama di alam terbuka. Terdiri dari berbagai jenis kegiatan seperti <strong>KPTA</strong>, <strong>KOPABA</strong>, <strong>KKT</strong>, serta <strong>Purna Bakti</strong>.</p>
-</div>
-<div id="kepemimpinan" class="tab-content">
-<p>Kegiatan kepemimpinan bertujuan untuk menumbuhkan jiwa pemimpin, meningkatkan rasa tanggung jawab, serta melatih keterampilan mengorganisasi dan bekerja dalam tim.</p>
-</div>
-</section>
+    <section id="galeri">
+      <h2>Galeri</h2>
+      <div class="tabs">
+        <div class="tab" onclick="toggleTab(this, 'fotoLatihan')">Foto Latihan</div>
+        <div class="tab" onclick="toggleTab(this, 'fotoPerkemahan')">Foto Perkemahan</div>
+        <div class="tab" onclick="toggleTab(this, 'fotoKepemimpinan')">Foto Kepemimpinan</div>
+      </div>
+      <div id="fotoLatihan" class="tab-content">
+        <div class="gallery">
+          <img src="img/latihan.jpg" alt="Foto Latihan 1" />
+          <img src="img/latihan2.jpg" alt="Foto Latihan 2" />
+          <img src="img/latihan3.jpg" alt="Foto Latihan 3" />
+          <img src="img/latihan4.jpg" alt="Foto Latihan 4" />
+        </div>
+      </div>
+      <div id="fotoPerkemahan" class="tab-content">
+        <div class="gallery">
+          <img src="img/perkemahan1.jpg" alt="Foto Perkemahan 1" />
+          <img src="img/perkemahan 2.jpg" alt="Foto Perkemahan 2" />
+           <img src="img/perkemahan3.jpg" alt="Foto Perkemahan 3" />
+            <img src="img/perkemahan4.jpg" alt="Foto Perkemahan 4" />
+        </div>
+      </div>
+      <div id="fotoKepemimpinan" class="tab-content">
+        <div class="gallery">
+          <img src="img/kepemimpinan1.jpg" alt="Foto Kepemimpinan 1" />
+          <img src="img/kepemimpinan2.jpg" alt="Foto Kepemimpinan 2" />
+           <img src="img/kepemimpinan3.jpg" alt="Foto Kepemimpinan 3" />
+            <img src="img/kepemimpinan4.jpg" alt="Foto Kepemimpinan 4" />
+        </div>
+      </div>
+    </section>
 
-<section id="galeri">
-<h2>Galeri</h2>
-<div class="tabs">
-<div class="tab" onclick="toggleTab(this, 'fotoLatihan')">Foto Latihan</div>
-<div class="tab" onclick="toggleTab(this, 'fotoPerkemahan')">Foto Perkemahan</div>
-<div class="tab" onclick="toggleTab(this, 'fotoKepemimpinan')">Foto Kepemimpinan</div>
-</div>
-<div id="fotoLatihan" class="tab-content">
-<div class="gallery">
-<img src="img/latihan.jpg" alt="Latihan 1" />
-<img src="img/latihan2.jpg" alt="Latihan 2" />
-<img src="img/latihan3.jpg" alt="Latihan 3" />
-</div>
-</div>
-<div id="fotoPerkemahan" class="tab-content">
-<div class="gallery">
-<img src="img/perkemahan1.jpg" alt="Perkemahan 1" />
-<img src="img/perkemahan2.jpg" alt="Perkemahan 2" />
-<img src="img/perkemahan3.jpg" alt="Perkemahan 3" />
-</div>
-</div>
-<div id="fotoKepemimpinan" class="tab-content">
-<div class="gallery">
-<img src="img/kepemimpinan1.jpg" alt="Kepemimpinan 1" />
-<img src="img/kepemimpinan2.jpg" alt="Kepemimpinan 2" />
-<img src="img/kepemimpinan3.jpg" alt="Kepemimpinan 3" />
-</div>
-</div>
-</section>
+    <section id="dewan">
+      <h2>Dewan Ambalan</h2>
+      <div class="tabs">
+        <div class="tab" onclick="toggleTab(this, 'pengurus')">Struktur Dewan Ambalan 2025/2026</div>
+      </div>
+      <div id="pengurus" class="tab-content">
+        <ul style="list-style-type: none; padding-left: 0">
+           <li><strong>Pradana Putra:</strong> Rizkia</li><br>
+           <li><strong>Pradana Putri:</strong> Nimas</li><br>
+           <li><strong>Pemangku Adat Putra:</strong> Musa</li><br>
+           <li><strong>Pemangku Adat Putri:</strong> Ghita</li><br>
+           <li><strong>Kerani 1:</strong> Mayda</li><br>
+           <li><strong>Kerani 2:</strong> Nila</li><br>
+           <li><strong>Juru Uang 1:</strong> Ama</li><br>
+           <li><strong>Juru Uang 2:</strong> Nova</li><br>
+           <li><strong>Giatpram:</strong> Lailul, Isna, Sandi, Ivan</li><br>
+           <li><strong>Abdimas:</strong> Dimas, Hasan, Sintya, Fara</li><br>
+           <li><strong>Kajipram:</strong> Firoh, Findia, Silviana, Sera</li><br>
+           <li><strong>Evabang:</strong> Milati, Sintya, Disca, Pinky</li>
+        </ul>
+      </div>
+    </section>
 
-<section id="dewan">
-<h2>Dewan Ambalan</h2>
-<div class="tabs">
-<div class="tab" onclick="toggleTab(this, 'pengurus')">Struktur 2025/2026</div>
-</div>
-<div id="pengurus" class="tab-content">
-<ul style="list-style-type:none; padding-left:0">
-<li><strong>Pradana Putra:</strong> Rizkia</li>
-<li><strong>Pradana Putri:</strong> Nimas</li>
-<li><strong>Pemangku Adat Putra:</strong> Musa</li>
-<li><strong>Pemangku Adat Putri:</strong> Ghita</li>
-<li><strong>Kerani 1:</strong> Mayda</li>
-<li><strong>Kerani 2:</strong> Nila</li>
-<li><strong>Juru Uang 1:</strong> Ama</li>
-<li><strong>Juru Uang 2:</strong> Nova</li>
-<li><strong>Giatpram:</strong> Lailul, Isna, Sandi, Ivan</li>
-<li><strong>Abdimas:</strong> Dimas, Hasan, Sintya, Fara</li>
-<li><strong>Kajipram:</strong> Firoh, Findia, Silviana, Sera</li>
-<li><strong>Evabang:</strong> Milati, Sintya, Disca, Pinky</li>
-</ul>
-</div>
-</section>
+    <footer>
+      <p style="margin: 10px 0; font-weight: bold">Copyright © 2025 Ambalan Arjuna Srikandi</p>
+      <p style="margin: 5px 0">Gugus Depan 01.241-01.242 | Pangkalan MA Taqwiyatul Wathon</p>
+      <p style="margin: 5px 0">Sumberejo, Mranggen, Demak</p>
+    </footer>
 
-<footer>
-<p>&copy; 2025 Ambalan Arjuna Srikandi</p>
-<p>Gugus Depan 01.241-01.242 | Pangkalan MA Taqwiyatul Wathon</p>
-<p>Sumberejo, Mranggen, Demak</p>
-</footer>
+    <script>
+      function toggleTab(element, id) {
+        const tabContent = document.getElementById(id);
+        const isActive = tabContent.style.display === "block";
+        const tabs = document.querySelectorAll(".tab-content");
+        const tabElements = document.querySelectorAll(".tab");
 
-<script>
-function toggleTab(element, id) {
-  const tabs = document.querySelectorAll(".tab-content");
-  const tabButtons = document.querySelectorAll(".tab");
-  tabs.forEach(t => t.style.display = "none");
-  tabButtons.forEach(b => b.classList.remove("active"));
-  document.getElementById(id).style.display = "block";
-  element.classList.add("active");
-}
-</script>
-</body>
+        tabs.forEach((tab) => (tab.style.display = "none"));
+        tabElements.forEach((tabEl) => tabEl.classList.remove("active"));
+
+        if (!isActive) {
+          tabContent.style.display = "block";
+          element.classList.add("active");
+        }
+      }
+    </script>
+  </body>
 </html>
