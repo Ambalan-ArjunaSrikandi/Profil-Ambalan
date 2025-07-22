@@ -98,14 +98,15 @@ nav ul li {
         max-width: 800px;
         text-align: center;
       }
-   .tabs {
+      .tabs {
   display: flex;
   margin: 20px 0;
-  gap: 5px; /* tambahkan ini */
+  gap: 5px;              /* jarak antar tab */
+  width: 100%;           /* penuh sampai tepi */
 }
 
 .tab {
-  flex: 1;
+  flex: 1;               /* sama besar, bagi rata */
   text-align: center;
   padding: 10px 0;
   background: #000;
@@ -113,12 +114,13 @@ nav ul li {
   font-weight: bold;
   cursor: pointer;
   transition: background 0.3s;
-  border-radius: 5px;
+  border-radius: 4px;    /* biar agak lembut */
 }
+
 .tab:hover {
   background: #444;
 }
-
+  
       
       .tab-content {
         display: none;
