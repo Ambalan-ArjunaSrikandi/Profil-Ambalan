@@ -42,6 +42,7 @@
     }
     nav ul li a {
       color: white;
+      display: block;
       text-decoration: none;
       font-size: 1rem;
       font-weight: bold;
@@ -109,14 +110,15 @@
       grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
       gap: 15px;
     }
-    .card-dewan {
-      background: #111;
-      border-radius: 10px;
-      padding: 10px;
-      text-align: center;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-      transition: 0.3s;
-    }
+   .card-dewan {
+    max-width: 250px;   
+    margin: 10px auto;  
+    text-align: center;
+    background: #111;  
+    border-radius: 8px;
+    padding: 10px;
+  }
+
     .card-dewan p.role {
       color: #FFD700;
       font-size: 0.85rem;
@@ -125,9 +127,11 @@
     }
     .card-dewan img {
       width: 100%;
-      height: 220px;
-      object-fit: cover;
+      max-width: 150px;   
+      height: auto;
       border-radius: 6px;
+      margin: 0 auto 10px;
+      display: block;
     }
     .card-dewan p.name {
       color: #fff;
@@ -196,9 +200,10 @@
   <section id="tentang">
     <h2>Tentang Ambalan</h2>
     <p style="margin-top: 20px; text-align: justify; line-height: 1.8">
-      Ambalan Arjuna Srikandi merupakan wadah pembinaan bagi Pramuka Penegak di Pangkalan MA Taqwiyatul Wathon Sumberejo Mranggen Demak. Ambalan ini bertujuan membentuk generasi muda yang tangguh, berkarakter, dan memiliki wawasan luas.
-      Kegiatan di Ambalan Arjuna Srikandi meliputi latihan rutin, pelatihan kepemimpinan, dan perkemahan. Setiap kegiatan bertujuan untuk mengembangkan keterampilan, kemandirian, serta menanamkan nilai-nilai kepemimpinan dan kerja sama.
-      Nama "Arjuna" dan "Srikandi" diambil dari tokoh pewayangan yang melambangkan ketangguhan, keberanian, serta semangat juang yang tinggi.
+       Ambalan Arjuna Srikandi merupakan wadah pembinaan bagi Pramuka Penegak di Pangkalan MA Taqwiyatul Wathon Sumberejo Mranggen Demak. Ambalan ini bertujuan membentuk generasi muda yang tangguh, berkarakter, dan memiliki wawasan luas.
+        Kegiatan di Ambalan Arjuna Srikandi meliputi latihan rutin, pelatihan kepemimpinan, dan perkemahan. Setiap kegiatan bertujuan untuk mengembangkan keterampilan, kemandirian, serta menanamkan nilai-nilai kepemimpinan dan kerja sama.
+        Nama "Arjuna" dan "Srikandi" diambil dari tokoh pewayangan yang melambangkan ketangguhan, keberanian, serta semangat juang yang tinggi. Filosofi ini menjadi dasar bagi setiap anggota Ambalan dalam mengembangkan diri dan
+        berkontribusi bagi masyarakat.
     </p>
   </section>
 
@@ -213,11 +218,11 @@
     </div>
     <div id="misi" class="tab-content">
       <ol style="padding-left: 20px; line-height: 1.8">
-        <li style="text-align: justify">Menanamkan nilai-nilai kepramukaan seperti kedisiplinan, keberanian, dan kerja sama tim.</li>
-        <li style="text-align: justify">Mengembangkan keterampilan melalui latihan rutin, pelatihan kepemimpinan, dan perkemahan.</li>
-        <li style="text-align: justify">Mendorong anggota untuk aktif berkontribusi dalam kegiatan sosial dan lingkungan.</li>
-        <li style="text-align: justify">Membentuk pribadi yang mandiri, bertanggung jawab, dan berintegritas tinggi.</li>
-        <li style="text-align: justify">Menumbuhkan semangat belajar dan pengembangan diri berkelanjutan.</li>
+         <li style="text-align: justify">Menanamkan nilai-nilai kepramukaan yang meliputi kedisiplinan, keberanian, dan kerja sama tim.</li>
+          <li style="text-align: justify">Mengembangkan keterampilan anggota melalui kegiatan latihan rutin, pelatihan kepemimpinan, dan perkemahan.</li>
+          <li style="text-align: justify">Mendorong anggota untuk aktif berkontribusi dalam kegiatan sosial dan lingkungan.</li>
+          <li style="text-align: justify">Membentuk pribadi yang mandiri, bertanggung jawab, dan berintegritas tinggi.</li>
+          <li style="text-align: justify">Menumbuhkan semangat belajar dan pengembangan diri secara berkelanjutan demi masa depan yang lebih baik.</li>
       </ol>
     </div>
   </section>
@@ -230,13 +235,17 @@
       <div class="tab" onclick="toggleTab(this, 'kepemimpinan')">Kepemimpinan</div>
     </div>
     <div id="latihan" class="tab-content">
-      <p>Latihan rutin dilaksanakan setiap <strong>Sabtu pukul 07.00 – 08.30 WIB</strong>. Meliputi baris-berbaris, tali-temali, semaphore, serta pengembangan fisik dan mental.</p>
+      <p>  Latihan rutin dilaksanakan setiap <strong>Sabtu pukul 07.00 – 08.30 WIB</strong>. Kegiatan ini bertujuan untuk meningkatkan keterampilan dasar Pramuka, seperti baris-berbaris, tali-temali, semaphore, serta pengembangan fisik dan
+          mental. 
+        </p>
     </div>
     <div id="perkemahan" class="tab-content">
-      <p>Perkemahan bertujuan melatih kemandirian, keberanian, dan kerja sama. Contoh: <strong>KPTA</strong>, <strong>KOPABA</strong>, <strong>KKT</strong>, dan <strong>Purna Bakti</strong>.</p>
+      <p> Perkemahan bertujuan melatih kemandirian, keberanian, dan kerja sama di alam terbuka. Terdiri dari berbagai jenis kegiatan seperti <strong>KPTA</strong> (Kemah Penerimaan Tamu Ambalan),
+          <strong>KOPABA</strong> (Kemah Orientasi Pelatikan Anggota Baru), <strong>KKT</strong> (Kemah Kenaikan Tingkat), serta <strong>Purna Bakti</strong>.
+        </p>
     </div>
     <div id="kepemimpinan" class="tab-content">
-      <p>Kegiatan kepemimpinan menumbuhkan jiwa pemimpin, tanggung jawab, dan kemampuan organisasi.</p>
+      <p>Kegiatan kepemimpinan bertujuan untuk menumbuhkan jiwa pemimpin, meningkatkan rasa tanggung jawab, serta melatih keterampilan mengorganisasi dan bekerja dalam tim.</p>
     </div>
   </section>
 
@@ -258,7 +267,7 @@
     <div id="fotoPerkemahan" class="tab-content">
       <div class="gallery">
         <img src="img/perkemahan1.jpg" alt="Foto Perkemahan 1" />
-        <img src="img/perkemahan2.jpg" alt="Foto Perkemahan 2" />
+        <img src="img/perkemahan 2.jpg" alt="Foto Perkemahan 2" />
         <img src="img/perkemahan3.jpg" alt="Foto Perkemahan 3" />
         <img src="img/perkemahan4.jpg" alt="Foto Perkemahan 4" />
       </div>
