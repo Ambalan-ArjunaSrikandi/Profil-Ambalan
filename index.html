@@ -1,163 +1,120 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="id">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ambalan Arjuna Srikandi</title>
-  <meta name="description" content="Website resmi Ambalan Arjuna Srikandi Gugus Depan 01.241-01.242 MA Taqwiyatul Wathon Sumberejo Mranggen Demak. Informasi kegiatan, galeri, dan struktur Dewan Ambalan.">
-  <meta name="keywords" content="Ambalan Arjuna Srikandi, MA Taqwiyatul Wathon, Pramuka Penegak, Pramuka Demak, Arjuna, Srikandi, Pramuka Mranggen">
-  <link rel="icon" type="image/png" href="img/Logo ambalan.jpg"/>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      font-family: "Arial", sans-serif;
-      background: url("img/latihan.jpg") no-repeat center center fixed;
-      background-size: cover;
-      color: #333;
-    }
-    header {
-      text-align: center;
-      padding: 20px;
-      background: rgba(0, 0, 0, 0.8);
-      color: white;
-    }
-    nav {
-      text-align: center;
-      background: rgba(0, 0, 0, 0.9);
-      padding: 10px 0;
-    }
-    nav ul {
-      list-style: none;
-    }
-    nav ul li {
-      display: inline-block;
-      margin: 0 10px;
-    }
-    nav ul li a {
-      color: white;
-      text-decoration: none;
-      font-size: 1rem;
-      font-weight: bold;
-      padding: 6px 12px;
-      transition: background 0.3s, border-bottom 0.3s;
-      border-bottom: 3px solid transparent;
-    }
-    nav ul li a:hover,
-    nav ul li a.active {
-      border-bottom: 3px solid #ffd700;
-      background: rgba(255, 215, 0, 0.2);
-    }
-    section {
-      padding: 20px;
-      background: rgba(255, 255, 255, 0.95);
-      margin: 15px auto;
-      border-radius: 10px;
-      max-width: 900px;
-      text-align: center;
-    }
-    .tabs {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      margin: 15px 0;
-    }
-    .tab {
-      padding: 8px 15px;
-      background: #000;
-      margin: 5px;
-      border-radius: 5px;
-      cursor: pointer;
-      font-weight: bold;
-      color: white;
-      transition: background 0.3s;
-    }
-    .tab:hover,
-    .tab.active {
-      background: #ffd700;
-      color: black;
-    }
-    .tab-content {
-      display: none;
-    }
-    .gallery {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 10px;
-    }
-    .gallery img {
-      width: 100%;
-      max-width: 280px;
-      height: 180px;
-      object-fit: cover;
-      border-radius: 5px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-      transition: transform 0.3s;
-    }
-    .gallery img:hover {
-      transform: scale(1.05);
-    }
-    /* === Grid Dewan Ambalan === */
-    .grid-dewan {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 15px;
-    }
-    .card-dewan {
-      background: #111;
-      border-radius: 10px;
-      padding: 10px;
-      text-align: center;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-      transition: 0.3s;
-    }
-    .card-dewan p.role {
-      color: #FFD700;
-      font-size: 0.85rem;
-      font-weight: bold;
-      margin-bottom: 6px;
-    }
-    .card-dewan img {
-      width: 100%;
-      height: 250px;
-      object-fit: contain;
-      border-radius: 6px;
-    }
-    .card-dewan p.name {
-      color: #fff;
-      margin-top: 6px;
-      font-size: 0.95rem;
-    }
-    /* === Responsif untuk HP === */
-    @media (max-width: 600px) {
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ambalan Arjuna Srikandi</title>
+    <meta name="description" content="Website resmi Ambalan Arjuna Srikandi Gugus Depan 01.241-01.242 MA Taqwiyatul Wathon Sumberejo Mranggen Demak. Informasi kegiatan, galeri, dan struktur Dewan Ambalan.">
+    <meta name="keywords" content="Ambalan Arjuna Srikandi, MA Taqwiyatul Wathon, Pramuka Penegak, Pramuka Demak, Arjuna, Srikandi, Pramuka Mranggen">
+  <!-- Ini favicon-nya -->
+  <link rel="icon" type="image/png" href="img/Logo ambalan.jpg" />
+</head>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Arial", sans-serif;
+        background: url("img/latihan.jpg") no-repeat center center fixed;
+        background-size: cover;
+        color: #333;
+      }
+      header {
+        text-align: center;
+        padding: 20px;
+        background: rgba(0, 0, 0, 0.8);
+        color: white;
+      }
+      header p {
+        font-size: 1.1rem;
+        margin: 5px 0;
+        letter-spacing: 1px;
+      }
+      nav {
+        text-align: center;
+        background: rgba(0, 0, 0, 0.9);
+        padding: 10px 0;
+      }
+      nav ul {
+        list-style: none;
+      }
       nav ul li {
-        display: block;
-        margin: 8px 0;
+        display: inline-block;
+        margin: 0 15px;
+      }
+      nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 1.2rem;
+        font-weight: bold;
+        padding: 8px 15px;
+        transition: background 0.3s, border-bottom 0.3s;
+        border-bottom: 3px solid transparent;
+      }
+      nav ul li a:hover,
+      nav ul li a.active {
+        border-bottom: 3px solid #ffd700;
+        background: rgba(255, 215, 0, 0.2);
       }
       section {
-        padding: 15px;
+        padding: 30px;
+        background: rgba(255, 255, 255, 0.9);
+        margin: 20px auto;
+        border-radius: 10px;
+        max-width: 800px;
+        text-align: center;
       }
-      .card-dewan img {
-        height: 180px;
+      .tabs {
+        display: flex;
+        justify-content: center;
+        margin: 20px 0;
       }
-    }
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #222;
-      color: white;
-      margin-top: 20px;
-      border-top: 5px solid #ffd700;
-      font-size: 0.9rem;
-    }
-  </style>
-
-
+      .tab {
+        padding: 10px 20px;
+        background: #000;
+        margin: 0 5px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+        color: white;
+        transition: background 0.3s;
+      }
+      .tab:hover,
+      .tab.active {
+        background: #ffd700;
+        color: black;
+      }
+      .tab-content {
+        display: none;
+      }
+      .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+      }
+      .gallery img {
+        width: 300px;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        transition: transform 0.3s;
+      }
+      .gallery img:hover {
+        transform: scale(1.05);
+      }
+      footer {
+        text-align: center;
+        padding: 40px;
+        background: #222;
+        color: white;
+        margin-top: 20px;
+        border-top: 5px solid #ffd700;
+      }
+    </style>
   </head>
   <body>
     <header>
@@ -229,6 +186,7 @@
         <p>Kegiatan kepemimpinan bertujuan untuk menumbuhkan jiwa pemimpin, meningkatkan rasa tanggung jawab, serta melatih keterampilan mengorganisasi dan bekerja dalam tim.</p>
       </div>
     </section>
+
     <section id="galeri">
       <h2>Galeri</h2>
       <div class="tabs">
@@ -261,46 +219,30 @@
         </div>
       </div>
     </section>
-  <section id="dewan">
-    <h2>Dewan Ambalan</h2>
-    <div class="tabs">
-      <div class="tab" onclick="toggleTab(this, 'pengurus')">Struktur Dewan Ambalan 2025/2026</div>
-    </div>
-    <div id="pengurus" class="tab-content">
-      <div class="grid-dewan">
-        <div class="card-dewan">
-          <p class="role">Pradana Putra</p>
-          <img src="img/rizkia.jpg" alt="Rizkia">
-          <p class="name">Rizkia</p>
-        </div>
-        <div class="card-dewan">
-          <p class="role">Pradana Putri</p>
-          <img src="img/nimas.jpg" alt="Nimas">
-          <p class="name">Nimas</p>
-        </div>
-        <div class="card-dewan">
-          <p class="role">Pemangku Adat Putra</p>
-          <img src="img/musa.jpg" alt="Musa">
-          <p class="name">Musa</p>
-        </div>
-        <div class="card-dewan">
-          <p class="role">Pemangku Adat Putri</p>
-          <img src="img/ghita.jpg" alt="Ghita">
-          <p class="name">Ghita</p>
-        </div>
-        <div class="card-dewan">
-          <p class="role">Kerani 1</p>
-          <img src="img/mayda.jpg" alt="Mayda">
-          <p class="name">Mayda</p>
-        </div>
-        <div class="card-dewan">
-          <p class="role">Kerani 2</p>
-          <img src="img/nila.jpg" alt="Nila">
-          <p class="name">Nila</p>
-        </div>
+
+    <section id="dewan">
+      <h2>Dewan Ambalan</h2>
+      <div class="tabs">
+        <div class="tab" onclick="toggleTab(this, 'pengurus')">Struktur Dewan Ambalan 2025/2026</div>
       </div>
-    </div>
-  </section>
+      <div id="pengurus" class="tab-content">
+        <ul style="list-style-type: none; padding-left: 0">
+           <li><strong>Pradana Putra:</strong> Rizkia</li><br>
+           <li><strong>Pradana Putri:</strong> Nimas</li><br>
+           <li><strong>Pemangku Adat Putra:</strong> Musa</li><br>
+           <li><strong>Pemangku Adat Putri:</strong> Ghita</li><br>
+           <li><strong>Kerani 1:</strong> Mayda</li><br>
+           <li><strong>Kerani 2:</strong> Nila</li><br>
+           <li><strong>Juru Uang 1:</strong> Ama</li><br>
+           <li><strong>Juru Uang 2:</strong> Nova</li><br>
+           <li><strong>Giatpram:</strong> Lailul, Isna, Sandi, Ivan</li><br>
+           <li><strong>Abdimas:</strong> Dimas, Hasan, Sintya, Fara</li><br>
+           <li><strong>Kajipram:</strong> Firoh, Findia, Silviana, Sera</li><br>
+           <li><strong>Evabang:</strong> Milati, Sintya, Disca, Pinky</li>
+        </ul>
+      </div>
+    </section>
+
     <footer>
       <p style="margin: 10px 0; font-weight: bold">Copyright © 2025 Ambalan Arjuna Srikandi</p>
       <p style="margin: 5px 0">Gugus Depan 01.241-01.242 | Pangkalan MA Taqwiyatul Wathon</p>
