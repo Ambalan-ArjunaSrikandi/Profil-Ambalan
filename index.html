@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="id">
   <head>
-    <meta name="google-site-verification" content="N1xm7MOCsn8rVYGbIPrjcLueZMW-YgyskRnQ4I7H1kg" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ambalan Arjuna Srikandi</title>
@@ -59,38 +58,6 @@
         border-bottom: 3px solid #ffd700;
         background: rgba(255, 215, 0, 0.2);
       }
-      nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-nav ul li {
-  margin: 5px;
-}
-
-@media (max-width: 600px) {
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  nav ul li {
-    width: 100%;
-    text-align: center;
-    margin: 2px 0;
-  }
-
-  nav ul li a {
-    display: block;
-    width: 100%;
-    padding: 10px 0;
-    font-size: 1rem;
-  }
-}
       section {
         padding: 30px;
         background: rgba(255, 255, 255, 0.9);
@@ -100,30 +67,25 @@ nav ul li {
         text-align: center;
       }
       .tabs {
-  display: flex;
-  margin: 20px 0;
-  gap: 5px;              /* jarak antar tab */
-  width: 100%;           /* penuh sampai tepi */
-}
-
-.tab {
-  flex: 1;
-  text-align: center;
-  padding: 10px 0;
-  background: #000;
-  color: white;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background 0.3s;
-  border-radius: 4px;
-}
-
-/* tab aktif */
-.tab.active {
-  background: orange;
-  color: black;
-}
-      
+        display: flex;
+        justify-content: center;
+        margin: 20px 0;
+      }
+      .tab {
+        padding: 10px 20px;
+        background: #000;
+        margin: 0 5px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+        color: white;
+        transition: background 0.3s;
+      }
+      .tab:hover,
+      .tab.active {
+        background: #ffd700;
+        color: black;
+      }
       .tab-content {
         display: none;
       }
@@ -263,22 +225,42 @@ nav ul li {
       <div class="tabs">
         <div class="tab" onclick="toggleTab(this, 'pengurus')">Struktur Dewan Ambalan 2025/2026</div>
       </div>
-      <div id="pengurus" class="tab-content">
-        <ul style="list-style-type: none; padding-left: 0">
-           <li><strong>Pradana Putra:</strong> Rizkia</li><br>
-           <li><strong>Pradana Putri:</strong> Nimas</li><br>
-           <li><strong>Pemangku Adat Putra:</strong> Musa</li><br>
-           <li><strong>Pemangku Adat Putri:</strong> Ghita</li><br>
-           <li><strong>Kerani 1:</strong> Mayda</li><br>
-           <li><strong>Kerani 2:</strong> Nila</li><br>
-           <li><strong>Juru Uang 1:</strong> Ama</li><br>
-           <li><strong>Juru Uang 2:</strong> Nova</li><br>
-           <li><strong>Giatpram:</strong> Lailul, Isna, Sandi, Ivan</li><br>
-           <li><strong>Abdimas:</strong> Dimas, Hasan, Sintya, Fara</li><br>
-           <li><strong>Kajipram:</strong> Firoh, Findia, Silviana, Sera</li><br>
-           <li><strong>Evabang:</strong> Milati, Sintya, Disca, Pinky</li>
-        </ul>
-      </div>
+      <div id="pengurus" class="tab-content" style="background#fffefe; padding:20px; border-radius:10px;">
+
+  <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:20px;">
+    <div style="background:#030303; border-radius:10px; padding:10px; text-align:center; box-shadow:0 4px 10px rgba(255,255,255,0.2); transition:0.3s;">
+      <p style="color:#FFD700; font-size:0.9rem; font-weight:bold; margin-bottom:6px;">Pradana Putra</p>
+      <img src="img/rizkia.jpg" alt="Rizkia" style="width:100%; height:240px; object-fit:cover; border-radius:6px;">
+      <p style="color:#fff; margin-top:6px; font-size:1rem;">Rizkia</p>
+    </div>
+    <div style="background:#111; border-radius:10px; padding:10px; text-align:center; box-shadow:0 4px 10px rgba(255,255,255,0.2); transition:0.3s;">
+      <p style="color:#FFD700; font-size:0.9rem; font-weight:bold; margin-bottom:6px;">Pradana Putri</p>
+      <img src="img/nimas.jpg" alt="Nimas" style="width:100%; height:240px; object-fit:cover; border-radius:6px;">
+      <p style="color:#fff; margin-top:6px; font-size:1rem;">Nimas</p>
+    </div>
+    <div style="background:#111; border-radius:10px; padding:10px; text-align:center; box-shadow:0 4px 10px rgba(255,255,255,0.2); transition:0.3s;">
+      <p style="color:#FFD700; font-size:0.9rem; font-weight:bold; margin-bottom:6px;">Pemangku Adat Putra</p>
+      <img src="img/musa.jpg" alt="Musa" style="width:100%; height:240px; object-fit:cover; border-radius:6px;">
+      <p style="color:#fff; margin-top:6px; font-size:1rem;">Musa</p>
+    </div>
+    <div style="background:#111; border-radius:10px; padding:10px; text-align:center; box-shadow:0 4px 10px rgba(255,255,255,0.2); transition:0.3s;">
+      <p style="color:#FFD700; font-size:0.9rem; font-weight:bold; margin-bottom:6px;">Pemangku Adat Putri</p>
+      <img src="img/ghita.jpg" alt="Ghita" style="width:100%; height:240px; object-fit:cover; border-radius:6px;">
+      <p style="color:#fff; margin-top:6px; font-size:1rem;">Ghita</p>
+    </div>
+    <div style="background:#111; border-radius:10px; padding:10px; text-align:center; box-shadow:0 4px 10px rgba(255,255,255,0.2); transition:0.3s;">
+      <p style="color:#FFD700; font-size:0.9rem; font-weight:bold; margin-bottom:6px;">Kerani 1</p>
+      <img src="img/mayda.jpg" alt="Ghita" style="width:100%; height:240px; object-fit:cover; border-radius:6px;">
+      <p style="color:#fff; margin-top:6px; font-size:1rem;">Mayda</p>
+    </div>
+    <div style="background:#111; border-radius:10px; padding:10px; text-align:center; box-shadow:0 4px 10px rgba(255,255,255,0.2); transition:0.3s;">
+      <p style="color:#FFD700; font-size:0.9rem; font-weight:bold; margin-bottom:6px;">Kerani 2</p>
+      <img src="img/nila.jpg" alt="Ghita" style="width:100%; height:240px; object-fit:cover; border-radius:6px;">
+      <p style="color:#fff; margin-top:6px; font-size:1rem;">Nila</p>
+    </div>
+
+  </div>
+</div>
     </section>
 
     <footer>
